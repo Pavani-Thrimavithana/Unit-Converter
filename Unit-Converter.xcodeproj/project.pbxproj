@@ -14,6 +14,8 @@
 		0408D9DD211DA55600D65AAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0408D9DB211DA55600D65AAA /* LaunchScreen.storyboard */; };
 		04C1A81D21253ACD005C6852 /* WeightController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C1A81C21253ACD005C6852 /* WeightController.swift */; };
 		04C1A81F212557C4005C6852 /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C1A81E212557C4005C6852 /* WeightViewController.swift */; };
+		04CC3BA82126156E00E35CF9 /* TemperatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC3BA72126156E00E35CF9 /* TemperatureViewController.swift */; };
+		04CC3BAA2126160000E35CF9 /* TemperatureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC3BA92126160000E35CF9 /* TemperatureController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		0408D9DE211DA55600D65AAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04C1A81C21253ACD005C6852 /* WeightController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WeightController.swift; path = Controller/WeightController.swift; sourceTree = "<group>"; };
 		04C1A81E212557C4005C6852 /* WeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
+		04CC3BA72126156E00E35CF9 /* TemperatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureViewController.swift; sourceTree = "<group>"; };
+		04CC3BA92126160000E35CF9 /* TemperatureController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TemperatureController.swift; path = Controller/TemperatureController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				0408D9D6211DA55100D65AAA /* Unit_Converter.xcdatamodeld */,
 				04C1A81C21253ACD005C6852 /* WeightController.swift */,
 				04C1A81E212557C4005C6852 /* WeightViewController.swift */,
+				04CC3BA72126156E00E35CF9 /* TemperatureViewController.swift */,
+				04CC3BA92126160000E35CF9 /* TemperatureController.swift */,
 			);
 			path = "Unit-Converter";
 			sourceTree = "<group>";
@@ -141,10 +147,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04CC3BAA2126160000E35CF9 /* TemperatureController.swift in Sources */,
 				04C1A81F212557C4005C6852 /* WeightViewController.swift in Sources */,
 				04C1A81D21253ACD005C6852 /* WeightController.swift in Sources */,
 				0408D9D8211DA55100D65AAA /* Unit_Converter.xcdatamodeld in Sources */,
 				0408D9D0211DA55100D65AAA /* AppDelegate.swift in Sources */,
+				04CC3BA82126156E00E35CF9 /* TemperatureViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
