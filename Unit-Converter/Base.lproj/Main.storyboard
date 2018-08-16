@@ -289,7 +289,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <connections>
-                                    <action selector="kilogramTo:" destination="TCn-Z4-skf" eventType="editingDidBegin" id="kkv-qv-4tq"/>
+                                    <action selector="kilogramTo:" destination="TCn-Z4-skf" eventType="editingChanged" id="n7X-be-xRH"/>
+                                    <action selector="onEditKilogram:" destination="TCn-Z4-skf" eventType="editingDidBegin" id="lgP-hb-Ygd"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ht7-QV-zlc">
@@ -299,7 +300,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <connections>
-                                    <action selector="poundTo:" destination="TCn-Z4-skf" eventType="editingDidBegin" id="Ea8-sX-20k"/>
+                                    <action selector="onEditPound:" destination="TCn-Z4-skf" eventType="editingDidBegin" id="Ye1-MH-0Kg"/>
+                                    <action selector="poundTo:" destination="TCn-Z4-skf" eventType="editingChanged" id="dyF-js-4o0"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4RC-sD-A1h">
@@ -309,8 +311,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <connections>
-                                    <action selector="kilogramTo:" destination="TCn-Z4-skf" eventType="editingDidEnd" id="Hiu-8k-a09"/>
-                                    <action selector="ounceTo:" destination="TCn-Z4-skf" eventType="editingDidEnd" id="EzK-8Y-aO0"/>
+                                    <action selector="onEditOunce:" destination="TCn-Z4-skf" eventType="editingDidBegin" id="LDL-7U-FY4"/>
+                                    <action selector="ounceTo:" destination="TCn-Z4-skf" eventType="editingChanged" id="fQn-l0-lFM"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ounce" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9l0-W9-mIU">
@@ -334,7 +336,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <connections>
-                                    <action selector="gramTo:" destination="TCn-Z4-skf" eventType="editingDidEnd" id="l1q-1I-0hz"/>
+                                    <action selector="gramTo:" destination="TCn-Z4-skf" eventType="editingChanged" id="CqQ-9q-LiV"/>
+                                    <action selector="onEditGram:" destination="TCn-Z4-skf" eventType="editingDidBegin" id="LOn-pL-Uz4"/>
                                 </connections>
                             </textField>
                         </subviews>

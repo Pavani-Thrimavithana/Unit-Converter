@@ -39,9 +39,10 @@ class WeightViewController: UIViewController {
     @IBAction func gramTo(_ sender: Any) {
         //Get value of input from UITextView in variable
         let inputGramValue = Double(gramValue.text!)
+        
         //Use the input value for conversion
         if inputGramValue != nil{
-            //Create a instance
+            //Create an instance
             let weightController = WeightController()
             weightController.gramTo(inputGramValue!)
             self.kilogramValue.text = String(weightController.kilogramValue)
@@ -51,13 +52,11 @@ class WeightViewController: UIViewController {
     }
     
     @IBAction func kilogramTo(_ sender: Any) {
-        //Get value of input from UITextView in variable
         let inputKilogramValue = Double(kilogramValue.text!)
-        //Use the input value for conversion
+        
         if inputKilogramValue != nil{
-            //Create a instance
             let weightController = WeightController()
-            weightController.kilogramTo(inputKilogramValue!)
+            weightController.gramTo(inputKilogramValue!)
             self.gramValue.text = String(weightController.gramValue)
             self.poundValue.text = String(weightController.poundValue)
             self.ounceValue.text = String(weightController.ounceValue)
@@ -65,11 +64,9 @@ class WeightViewController: UIViewController {
     }
     
     @IBAction func poundTo(_ sender: Any) {
-        //Get value of input from UITextView in variable
         let inputPoundValue = Double(poundValue.text!)
-        //Use the input value for conversion
+        
         if inputPoundValue != nil{
-            //Create a instance
             let weightController = WeightController()
             weightController.gramTo(inputPoundValue!)
             self.gramValue.text = String(weightController.gramValue)
@@ -79,16 +76,39 @@ class WeightViewController: UIViewController {
     }
     
     @IBAction func ounceTo(_ sender: Any) {
-        //Get value of input from UITextView in variable
-        let inputOunceValue = Double(ounceValue.text!)
-        //Use the input value for conversion
-        if inputOunceValue != nil{
-            //Create a instance
+        let inputOuncevalue = Double(ounceValue.text!)
+        
+        if inputOuncevalue != nil{
             let weightController = WeightController()
-            weightController.gramTo(inputOunceValue!)
+            weightController.gramTo(inputOuncevalue!)
             self.gramValue.text = String(weightController.gramValue)
             self.kilogramValue.text = String(weightController.kilogramValue)
             self.poundValue.text = String(weightController.poundValue)
         }
     }
+ 
+    //Function to clear all the TextFeilds
+    func clearAll(){
+        gramValue.text = ""
+        kilogramValue.text = ""
+        poundValue.text = ""
+        ounceValue.text = ""
+    }
+    
+    @IBAction func onEditGram(_ sender: Any) {
+        clearAll()
+    }
+    
+    @IBAction func onEditKilogram(_ sender: Any) {
+        clearAll()
+    }
+    
+    @IBAction func onEditPound(_ sender: Any) {
+        clearAll()
+    }
+    
+    @IBAction func onEditOunce(_ sender: Any) {
+        clearAll()
+    }
+    
 }
