@@ -8,22 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		0408D9D0211DA55100D65AAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0408D9CF211DA55100D65AAA /* AppDelegate.swift */; };
-		0408D9D2211DA55100D65AAA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0408D9D1211DA55100D65AAA /* ViewController.swift */; };
 		0408D9D5211DA55100D65AAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0408D9D3211DA55100D65AAA /* Main.storyboard */; };
 		0408D9D8211DA55100D65AAA /* Unit_Converter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0408D9D6211DA55100D65AAA /* Unit_Converter.xcdatamodeld */; };
 		0408D9DA211DA55600D65AAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0408D9D9211DA55600D65AAA /* Assets.xcassets */; };
 		0408D9DD211DA55600D65AAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0408D9DB211DA55600D65AAA /* LaunchScreen.storyboard */; };
+		04C1A81D21253ACD005C6852 /* WeightController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C1A81C21253ACD005C6852 /* WeightController.swift */; };
+		04C1A81F212557C4005C6852 /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C1A81E212557C4005C6852 /* WeightViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0408D9CC211DA55100D65AAA /* Unit-Converter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Unit-Converter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0408D9CF211DA55100D65AAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0408D9D1211DA55100D65AAA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0408D9D4211DA55100D65AAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0408D9D7211DA55100D65AAA /* Unit_Converter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Unit_Converter.xcdatamodel; sourceTree = "<group>"; };
 		0408D9D9211DA55600D65AAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0408D9DC211DA55600D65AAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0408D9DE211DA55600D65AAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04C1A81C21253ACD005C6852 /* WeightController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WeightController.swift; path = Controller/WeightController.swift; sourceTree = "<group>"; };
+		04C1A81E212557C4005C6852 /* WeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,12 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				0408D9CF211DA55100D65AAA /* AppDelegate.swift */,
-				0408D9D1211DA55100D65AAA /* ViewController.swift */,
 				0408D9D3211DA55100D65AAA /* Main.storyboard */,
 				0408D9D9211DA55600D65AAA /* Assets.xcassets */,
 				0408D9DB211DA55600D65AAA /* LaunchScreen.storyboard */,
 				0408D9DE211DA55600D65AAA /* Info.plist */,
 				0408D9D6211DA55100D65AAA /* Unit_Converter.xcdatamodeld */,
+				04C1A81C21253ACD005C6852 /* WeightController.swift */,
+				04C1A81E212557C4005C6852 /* WeightViewController.swift */,
 			);
 			path = "Unit-Converter";
 			sourceTree = "<group>";
@@ -138,8 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C1A81F212557C4005C6852 /* WeightViewController.swift in Sources */,
+				04C1A81D21253ACD005C6852 /* WeightController.swift in Sources */,
 				0408D9D8211DA55100D65AAA /* Unit_Converter.xcdatamodeld in Sources */,
-				0408D9D2211DA55100D65AAA /* ViewController.swift in Sources */,
 				0408D9D0211DA55100D65AAA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
