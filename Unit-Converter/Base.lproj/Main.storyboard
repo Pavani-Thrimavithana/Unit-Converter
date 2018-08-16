@@ -97,7 +97,7 @@
         <!--Distance-->
         <scene sceneID="XXH-z2-ueO">
             <objects>
-                <viewController id="qD4-eG-R6g" sceneMemberID="viewController">
+                <viewController id="qD4-eG-R6g" customClass="DistanceViewController" customModule="Unit_Converter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sz7-0n-xAE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -136,6 +136,10 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="footTo:" destination="qD4-eG-R6g" eventType="editingChanged" id="IgZ-7L-ltT"/>
+                                    <action selector="onEditFoot:" destination="qD4-eG-R6g" eventType="editingDidBegin" id="I2i-ip-Wae"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ldf-od-6FL">
                                 <rect key="frame" x="198" y="193" width="155" height="30"/>
@@ -143,6 +147,10 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="onEditYard:" destination="qD4-eG-R6g" eventType="editingDidBegin" id="Abv-AY-pGg"/>
+                                    <action selector="yardTo:" destination="qD4-eG-R6g" eventType="editingChanged" id="NPU-wJ-4GP"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SYa-WI-H56">
                                 <rect key="frame" x="198" y="245" width="155" height="30"/>
@@ -150,6 +158,10 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="kilometreTo:" destination="qD4-eG-R6g" eventType="editingChanged" id="6vi-T7-hJJ"/>
+                                    <action selector="onEditKilometre:" destination="qD4-eG-R6g" eventType="editingDidBegin" id="KFL-WJ-c4l"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KQB-0O-R5d">
                                 <rect key="frame" x="198" y="294" width="155" height="30"/>
@@ -157,6 +169,10 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="mileTo:" destination="qD4-eG-R6g" eventType="editingChanged" id="g82-dP-9U5"/>
+                                    <action selector="onEditMile:" destination="qD4-eG-R6g" eventType="editingDidBegin" id="CQB-e7-eUh"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Metre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="71v-vY-MIh">
                                 <rect key="frame" x="33" y="93" width="45" height="21"/>
@@ -178,12 +194,23 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="metreTo:" destination="qD4-eG-R6g" eventType="editingChanged" id="qRh-E4-LL6"/>
+                                    <action selector="onEditMetre:" destination="qD4-eG-R6g" eventType="editingDidBegin" id="wxQ-0u-8nM"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="TrO-4p-HT1"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Distance" id="AK2-dV-hvi"/>
+                    <connections>
+                        <outlet property="footValue" destination="4DM-m9-97w" id="pQL-YQ-TYV"/>
+                        <outlet property="kilometreValue" destination="SYa-WI-H56" id="ub8-9x-akD"/>
+                        <outlet property="metreValue" destination="Bc4-Sa-JKQ" id="MqM-Ow-y8a"/>
+                        <outlet property="mileValue" destination="KQB-0O-R5d" id="eCs-WL-QCA"/>
+                        <outlet property="yardValue" destination="Ldf-od-6FL" id="CnA-Wd-4lI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="URV-Yh-vBN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

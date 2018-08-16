@@ -16,6 +16,8 @@
 		04C1A81F212557C4005C6852 /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C1A81E212557C4005C6852 /* WeightViewController.swift */; };
 		04CC3BA82126156E00E35CF9 /* TemperatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC3BA72126156E00E35CF9 /* TemperatureViewController.swift */; };
 		04CC3BAA2126160000E35CF9 /* TemperatureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC3BA92126160000E35CF9 /* TemperatureController.swift */; };
+		04CC3BAC2126222F00E35CF9 /* DistanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC3BAB2126222F00E35CF9 /* DistanceController.swift */; };
+		04CC3BAE2126226000E35CF9 /* DistanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC3BAD2126226000E35CF9 /* DistanceViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		04C1A81E212557C4005C6852 /* WeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
 		04CC3BA72126156E00E35CF9 /* TemperatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureViewController.swift; sourceTree = "<group>"; };
 		04CC3BA92126160000E35CF9 /* TemperatureController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TemperatureController.swift; path = Controller/TemperatureController.swift; sourceTree = "<group>"; };
+		04CC3BAB2126222F00E35CF9 /* DistanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DistanceController.swift; path = Controller/DistanceController.swift; sourceTree = "<group>"; };
+		04CC3BAD2126226000E35CF9 /* DistanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 				04C1A81E212557C4005C6852 /* WeightViewController.swift */,
 				04CC3BA72126156E00E35CF9 /* TemperatureViewController.swift */,
 				04CC3BA92126160000E35CF9 /* TemperatureController.swift */,
+				04CC3BAB2126222F00E35CF9 /* DistanceController.swift */,
+				04CC3BAD2126226000E35CF9 /* DistanceViewController.swift */,
 			);
 			path = "Unit-Converter";
 			sourceTree = "<group>";
@@ -147,6 +153,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04CC3BAC2126222F00E35CF9 /* DistanceController.swift in Sources */,
+				04CC3BAE2126226000E35CF9 /* DistanceViewController.swift in Sources */,
 				04CC3BAA2126160000E35CF9 /* TemperatureController.swift in Sources */,
 				04C1A81F212557C4005C6852 /* WeightViewController.swift in Sources */,
 				04C1A81D21253ACD005C6852 /* WeightController.swift in Sources */,
