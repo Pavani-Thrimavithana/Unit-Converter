@@ -12,6 +12,8 @@
 		0408D9D8211DA55100D65AAA /* Unit_Converter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0408D9D6211DA55100D65AAA /* Unit_Converter.xcdatamodeld */; };
 		0408D9DA211DA55600D65AAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0408D9D9211DA55600D65AAA /* Assets.xcassets */; };
 		0408D9DD211DA55600D65AAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0408D9DB211DA55600D65AAA /* LaunchScreen.storyboard */; };
+		045B380C212692870060F33C /* SpeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B380B212692870060F33C /* SpeedController.swift */; };
+		045B380E212692AA0060F33C /* SpeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045B380D212692AA0060F33C /* SpeedViewController.swift */; };
 		04C1A81D21253ACD005C6852 /* WeightController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C1A81C21253ACD005C6852 /* WeightController.swift */; };
 		04C1A81F212557C4005C6852 /* WeightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C1A81E212557C4005C6852 /* WeightViewController.swift */; };
 		04CC3BA82126156E00E35CF9 /* TemperatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CC3BA72126156E00E35CF9 /* TemperatureViewController.swift */; };
@@ -28,6 +30,8 @@
 		0408D9D9211DA55600D65AAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0408D9DC211DA55600D65AAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0408D9DE211DA55600D65AAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		045B380B212692870060F33C /* SpeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SpeedController.swift; path = Controller/SpeedController.swift; sourceTree = "<group>"; };
+		045B380D212692AA0060F33C /* SpeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedViewController.swift; sourceTree = "<group>"; };
 		04C1A81C21253ACD005C6852 /* WeightController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WeightController.swift; path = Controller/WeightController.swift; sourceTree = "<group>"; };
 		04C1A81E212557C4005C6852 /* WeightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightViewController.swift; sourceTree = "<group>"; };
 		04CC3BA72126156E00E35CF9 /* TemperatureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +82,8 @@
 				04CC3BA92126160000E35CF9 /* TemperatureController.swift */,
 				04CC3BAB2126222F00E35CF9 /* DistanceController.swift */,
 				04CC3BAD2126226000E35CF9 /* DistanceViewController.swift */,
+				045B380B212692870060F33C /* SpeedController.swift */,
+				045B380D212692AA0060F33C /* SpeedViewController.swift */,
 			);
 			path = "Unit-Converter";
 			sourceTree = "<group>";
@@ -159,8 +165,10 @@
 				04C1A81F212557C4005C6852 /* WeightViewController.swift in Sources */,
 				04C1A81D21253ACD005C6852 /* WeightController.swift in Sources */,
 				0408D9D8211DA55100D65AAA /* Unit_Converter.xcdatamodeld in Sources */,
+				045B380E212692AA0060F33C /* SpeedViewController.swift in Sources */,
 				0408D9D0211DA55100D65AAA /* AppDelegate.swift in Sources */,
 				04CC3BA82126156E00E35CF9 /* TemperatureViewController.swift in Sources */,
+				045B380C212692870060F33C /* SpeedController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

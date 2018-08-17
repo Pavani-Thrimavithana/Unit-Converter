@@ -219,7 +219,7 @@
         <!--Speed-->
         <scene sceneID="yMP-KD-6vL">
             <objects>
-                <viewController id="Wp9-Gm-Stz" sceneMemberID="viewController">
+                <viewController id="Wp9-Gm-Stz" customClass="SpeedViewController" customModule="Unit_Converter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pEw-lC-Edu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -251,6 +251,10 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="mpsTo:" destination="Wp9-Gm-Stz" eventType="editingChanged" id="t82-Aj-k7n"/>
+                                    <action selector="onEditMps:" destination="Wp9-Gm-Stz" eventType="editingDidBegin" id="j9W-cd-XZd"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ylz-07-uku">
                                 <rect key="frame" x="197" y="135" width="155" height="30"/>
@@ -258,6 +262,10 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="fpminTo:" destination="Wp9-Gm-Stz" eventType="editingChanged" id="Wgf-eG-Ci3"/>
+                                    <action selector="onEditFpmin:" destination="Wp9-Gm-Stz" eventType="editingDidBegin" id="I90-kY-cCK"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ao7-jO-WhL">
                                 <rect key="frame" x="197" y="183" width="155" height="30"/>
@@ -265,6 +273,10 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="kmphTo:" destination="Wp9-Gm-Stz" eventType="editingChanged" id="QDV-Ld-kfp"/>
+                                    <action selector="onEditKmph:" destination="Wp9-Gm-Stz" eventType="editingDidBegin" id="2iw-S5-wWC"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zja-S2-x53">
                                 <rect key="frame" x="197" y="237" width="155" height="30"/>
@@ -272,6 +284,10 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <action selector="mphTo:" destination="Wp9-Gm-Stz" eventType="editingChanged" id="R2I-oS-ByL"/>
+                                    <action selector="onEditMph:" destination="Wp9-Gm-Stz" eventType="editingDidBegin" id="jne-VH-47H"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Metre per sec" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Vd-ye-3ag">
                                 <rect key="frame" x="16" y="83" width="106" height="21"/>
@@ -292,6 +308,12 @@
                         <viewLayoutGuide key="safeArea" id="YRf-wo-rYL"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Speed" id="If9-Y6-N03"/>
+                    <connections>
+                        <outlet property="fpminValue" destination="ylz-07-uku" id="ma1-qD-PD2"/>
+                        <outlet property="kmphValue" destination="ao7-jO-WhL" id="Pjq-3N-Ilg"/>
+                        <outlet property="mphValue" destination="Zja-S2-x53" id="zsN-QT-bKb"/>
+                        <outlet property="mpsValue" destination="xAv-p0-Bew" id="xF2-Ib-gGS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jv6-BO-C9O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
