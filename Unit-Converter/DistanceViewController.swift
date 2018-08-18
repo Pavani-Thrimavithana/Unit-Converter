@@ -48,10 +48,13 @@ class DistanceViewController: UIViewController {
             let distanceController = DistanceController()
             distanceController.metreTo(inputMetreValue!)
             
-            self.footValue.text = String(distanceController.footValue)
-            self.yardValue.text = String(distanceController.yardValue)
-            self.kilometreValue.text = String(distanceController.kilometreValue)
-            self.mileValue.text = String(distanceController.mileValue)
+            self.footValue.text = String(format: "%.5f",distanceController.footValue)
+            self.yardValue.text = String(format: "%.5f",distanceController.yardValue)
+            self.kilometreValue.text = String(format: "%.5f",distanceController.kilometreValue)
+            self.mileValue.text = String(format: "%.5f",distanceController.mileValue)
+        }
+        else{
+            clearAll()
         }
     }
     
@@ -60,12 +63,15 @@ class DistanceViewController: UIViewController {
         
         if (inputFootValue != nil){
             let distanceController = DistanceController()
-            distanceController.metreTo(inputFootValue!)
+            distanceController.footTo(inputFootValue!)
             
-            self.metreValue.text = String(distanceController.metreValue)
-            self.yardValue.text = String(distanceController.yardValue)
-            self.kilometreValue.text = String(distanceController.kilometreValue)
-            self.mileValue.text = String(distanceController.mileValue)
+            self.metreValue.text = String(format: "%.5f",distanceController.metreValue)
+            self.yardValue.text = String(format: "%.5f",distanceController.yardValue)
+            self.kilometreValue.text = String(format: "%.5f",distanceController.kilometreValue)
+            self.mileValue.text = String(format: "%.5f",distanceController.mileValue)
+        }
+        else{
+            clearAll()
         }
     }
     
@@ -74,40 +80,49 @@ class DistanceViewController: UIViewController {
         
         if (inputYardValue != nil){
             let distanceController = DistanceController()
-            distanceController.metreTo(inputYardValue!)
+            distanceController.yardTo(inputYardValue!)
             
-            self.metreValue.text = String(distanceController.metreValue)
-            self.footValue.text = String(distanceController.footValue)
-            self.kilometreValue.text = String(distanceController.kilometreValue)
-            self.mileValue.text = String(distanceController.mileValue)
+            self.metreValue.text = String(format: "%.5f",distanceController.metreValue)
+            self.footValue.text = String(format: "%.5f",distanceController.footValue)
+            self.kilometreValue.text = String(format: "%.5f",distanceController.kilometreValue)
+            self.mileValue.text = String(format: "%.5f",distanceController.mileValue)
+        }
+        else{
+            clearAll()
         }
     }
     
     @IBAction func kilometreTo(_ sender: Any) {
-        let inputKilometreValue = Double(yardValue.text!)
+        let inputKilometreValue = Double(kilometreValue.text!)
         
         if (inputKilometreValue != nil){
             let distanceController = DistanceController()
-            distanceController.metreTo(inputKilometreValue!)
+            distanceController.kilometreTo(inputKilometreValue!)
             
-            self.metreValue.text = String(distanceController.metreValue)
-            self.footValue.text = String(distanceController.footValue)
-            self.yardValue.text = String(distanceController.yardValue)
-            self.mileValue.text = String(distanceController.mileValue)
+            self.metreValue.text = String(format: "%.5f",distanceController.metreValue)
+            self.footValue.text = String(format: "%.5f",distanceController.footValue)
+            self.yardValue.text = String(format: "%.5f",distanceController.yardValue)
+            self.mileValue.text = String(format: "%.5f",distanceController.mileValue)
+        }
+        else{
+            clearAll()
         }
     }
     
     @IBAction func mileTo(_ sender: Any) {
-        let inputMileValue = Double(yardValue.text!)
-        
+        let inputMileValue = Double(mileValue.text!)
+    
         if (inputMileValue != nil){
             let distanceController = DistanceController()
-            distanceController.metreTo(inputMileValue!)
+            distanceController.mileTo(inputMileValue!)
             
-            self.metreValue.text = String(distanceController.metreValue)
-            self.footValue.text = String(distanceController.footValue)
-            self.yardValue.text = String(distanceController.yardValue)
-            self.kilometreValue.text = String(distanceController.kilometreValue)
+            self.metreValue.text = String(format: "%.5f",distanceController.metreValue)
+            self.footValue.text = String(format: "%.5f",distanceController.footValue)
+            self.yardValue.text = String(format: "%.5f",distanceController.yardValue)
+            self.kilometreValue.text = String(format: "%.5f",distanceController.kilometreValue)
+        }
+        else{
+            clearAll()
         }
     }
     
@@ -142,5 +157,9 @@ class DistanceViewController: UIViewController {
     //Hide the keyboard
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+    }
+    //Hide statusbar
+    override var prefersStatusBarHidden: Bool{
+        return true
     }
 }

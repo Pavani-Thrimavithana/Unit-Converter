@@ -46,8 +46,11 @@ class TemperatureViewController: UIViewController {
             //Create an instance
             let temperaturController = TemperatureController()
             temperaturController.celciusTo(inputCelciusValue!)
-            self.fahrenheitValue.text = String(temperaturController.fahrenheitValue)
-            self.kelvinValue.text = String(temperaturController.kelvinValue)
+            self.fahrenheitValue.text = String(format: "%.5f",temperaturController.fahrenheitValue)
+            self.kelvinValue.text = String(format: "%.5f",temperaturController.kelvinValue)
+        }
+        else{
+            clearAll()
         }
     }
     
@@ -56,9 +59,12 @@ class TemperatureViewController: UIViewController {
         
         if inputFahrenheitValue != nil{
             let temperaturController = TemperatureController()
-            temperaturController.celciusTo(inputFahrenheitValue!)
-            self.celciusValue.text = String(temperaturController.celciusValue)
-            self.kelvinValue.text =  String(temperaturController.kelvinValue)
+            temperaturController.fahrenheitTo(inputFahrenheitValue!)
+            self.celciusValue.text = String(format: "%.5f",temperaturController.celciusValue)
+            self.kelvinValue.text =  String(format: "%.5f",temperaturController.kelvinValue)
+        }
+        else{
+            clearAll()
         }
     }
     
@@ -67,10 +73,12 @@ class TemperatureViewController: UIViewController {
         
         if inputKelvinValue != nil{
             let temperaturController = TemperatureController()
-            temperaturController.celciusTo(inputKelvinValue!)
-            self.celciusValue.text = String(temperaturController.celciusValue)
-            print("text")
-            self.fahrenheitValue.text = String(temperaturController.fahrenheitValue)
+            temperaturController.kelvinTo(inputKelvinValue!)
+            self.celciusValue.text = String(format: "%.5f",temperaturController.celciusValue)
+            self.fahrenheitValue.text = String(format: "%.5f",temperaturController.fahrenheitValue)
+        }
+        else{
+            clearAll()
         }
     }
     
@@ -96,5 +104,9 @@ class TemperatureViewController: UIViewController {
     //Hide the keyboard
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+    }
+    //Hide statusbar
+    override var prefersStatusBarHidden: Bool{
+        return true
     }
 }

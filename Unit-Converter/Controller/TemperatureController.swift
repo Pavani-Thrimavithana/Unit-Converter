@@ -25,6 +25,6 @@ class TemperatureController {
     }
     func kelvinTo(_ kelvin:Double) {
         self.celciusValue = (kelvin-273.15)
-        self.kelvinValue = ((kelvin*1.8)-459.67)
+        self.fahrenheitValue = ((kelvin*1.8)-459.67)
     }
 }

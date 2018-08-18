@@ -47,9 +47,12 @@ class SpeedViewController: UIViewController {
             //Create instance
             let speedController = SpeedController()
             speedController.mpsTo(inputMpsValue!)
-            self.fpminValue.text = String(speedController.fpminValue)
-            self.kmphValue.text = String(speedController.kmphValue)
-            self.mphValue.text = String(speedController.mphValue)
+            self.fpminValue.text = String(format: "%.5f",speedController.fpminValue)
+            self.kmphValue.text = String(format: "%.5f",speedController.kmphValue)
+            self.mphValue.text = String(format: "%.5f",speedController.mphValue)
+        }
+        else{
+            clearAll()
         }
     }
     
@@ -58,34 +61,43 @@ class SpeedViewController: UIViewController {
         
         if inputFpminValue != nil{
             let speedController = SpeedController()
-            speedController.mpsTo(inputFpminValue!)
-            self.mpsValue.text = String(speedController.mpsValue)
-            self.kmphValue.text = String(speedController.kmphValue)
-            self.mphValue.text = String(speedController.mphValue)
+            speedController.fpminTo(inputFpminValue!)
+            self.mpsValue.text = String(format: "%.5f",speedController.mpsValue)
+            self.kmphValue.text = String(format: "%.5f",speedController.kmphValue)
+            self.mphValue.text = String(format: "%.5f",speedController.mphValue)
+        }
+        else{
+            clearAll()
         }
     }
     
     @IBAction func kmphTo(_ sender: Any) {
-        let inputKmphValue = Double(fpminValue.text!)
+        let inputKmphValue = Double(kmphValue.text!)
         
         if inputKmphValue != nil{
             let speedController = SpeedController()
-            speedController.mpsTo(inputKmphValue!)
-            self.mpsValue.text = String(speedController.mpsValue)
-            self.fpminValue.text = String(speedController.fpminValue)
-            self.mphValue.text = String(speedController.mphValue)
+            speedController.kmphTo(inputKmphValue!)
+            self.mpsValue.text = String(format: "%.5f",speedController.mpsValue)
+            self.fpminValue.text = String(format: "%.5f",speedController.fpminValue)
+            self.mphValue.text = String(format: "%.5f",speedController.mphValue)
+        }
+        else{
+            clearAll()
         }
     }
     
     @IBAction func mphTo(_ sender: Any) {
-        let inputMphValue = Double(fpminValue.text!)
+        let inputMphValue = Double(mphValue.text!)
         
         if inputMphValue != nil{
             let speedController = SpeedController()
-            speedController.mpsTo(inputMphValue!)
-            self.mpsValue.text = String(speedController.mpsValue)
-            self.fpminValue.text = String(speedController.fpminValue)
-            self.kmphValue.text = String(speedController.kmphValue)
+            speedController.mphTo(inputMphValue!)
+            self.mpsValue.text = String(format: "%.5f",speedController.mpsValue)
+            self.fpminValue.text = String(format: "%.5f",speedController.fpminValue)
+            self.kmphValue.text = String(format: "%.5f",speedController.kmphValue)
+        }
+        else{
+            clearAll()
         }
     }
     
@@ -117,5 +129,9 @@ class SpeedViewController: UIViewController {
     //Hide the keyboard
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
+    }
+    //Hide statusbar
+    override var prefersStatusBarHidden: Bool{
+        return true
     }
 }

@@ -17,7 +17,6 @@ class WeightViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
         // Do any additional setup after loading the view.
     }
 
@@ -39,16 +38,20 @@ class WeightViewController: UIViewController {
 
     @IBAction func gramTo(_ sender: Any) {
         //Get value of input from UITextView in variable
+    
         let inputGramValue = Double(gramValue.text!)
-        
+         
         //Use the input value for conversion
         if inputGramValue != nil{
             //Create an instance
             let weightController = WeightController()
-            weightController.gramTo(inputGramValue!)
-            self.kilogramValue.text = String(weightController.kilogramValue)
-            self.poundValue.text = String(weightController.poundValue)
-            self.ounceValue.text = String(weightController.ounceValue)
+            weightController.gramTo(gram: inputGramValue!)
+            self.kilogramValue.text = String(format: "%.5f",weightController.kilogramValue)
+            self.poundValue.text = String(format: "%.5f",weightController.poundValue)
+            self.ounceValue.text = String(format: "%.5f",weightController.ounceValue)
+        }
+        else{
+            clearAll()
         }
     }
     
@@ -57,10 +60,13 @@ class WeightViewController: UIViewController {
         
         if inputKilogramValue != nil{
             let weightController = WeightController()
-            weightController.gramTo(inputKilogramValue!)
-            self.gramValue.text = String(weightController.gramValue)
-            self.poundValue.text = String(weightController.poundValue)
-            self.ounceValue.text = String(weightController.ounceValue)
+            weightController.kilogramTo(kilogram: inputKilogramValue!)
+            self.gramValue.text = String(format: "%.5f",weightController.gramValue)
+            self.poundValue.text = String(format: "%.5f",weightController.poundValue)
+            self.ounceValue.text = String(format: "%.5f",weightController.ounceValue)
+        }
+        else{
+            clearAll()
         }
     }
     
@@ -69,10 +75,13 @@ class WeightViewController: UIViewController {
         
         if inputPoundValue != nil{
             let weightController = WeightController()
-            weightController.gramTo(inputPoundValue!)
-            self.gramValue.text = String(weightController.gramValue)
-            self.kilogramValue.text = String(weightController.kilogramValue)
-            self.ounceValue.text = String(weightController.ounceValue)
+            weightController.poundTo(pound: inputPoundValue!)
+            self.gramValue.text = String(format: "%.5f",weightController.gramValue)
+            self.kilogramValue.text = String(format: "%.5f",weightController.kilogramValue)
+            self.ounceValue.text = String(format: "%.5f",weightController.ounceValue)
+        }
+        else{
+            clearAll()
         }
     }
     
@@ -81,10 +90,13 @@ class WeightViewController: UIViewController {
         
         if inputOuncevalue != nil{
             let weightController = WeightController()
-            weightController.gramTo(inputOuncevalue!)
-            self.gramValue.text = String(weightController.gramValue)
-            self.kilogramValue.text = String(weightController.kilogramValue)
-            self.poundValue.text = String(weightController.poundValue)
+            weightController.ounceTo(ounce: inputOuncevalue!)
+            self.gramValue.text = String(format: "%.5f",weightController.gramValue)
+            self.kilogramValue.text = String(format: "%.5f",weightController.kilogramValue)
+            self.poundValue.text = String(format: "%.5f",weightController.poundValue)
+        }
+        else{
+            clearAll()
         }
     }
  
@@ -116,4 +128,8 @@ class WeightViewController: UIViewController {
     self.view.endEditing(true)
     }
     
+    //Hide statusbar
+    override var prefersStatusBarHidden: Bool{
+        return true
+    }
 }
