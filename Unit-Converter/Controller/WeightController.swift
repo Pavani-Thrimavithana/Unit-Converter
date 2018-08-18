@@ -16,24 +16,24 @@ class WeightController{
     
     //Methods
     func gramTo(_ gram:Double){
-        self.kilogramValue = (gram * 0.001)
-        self.poundValue = (gram * 0.00220462)
-        self.ounceValue = (gram * 0.035274)
+        self.kilogramValue = (gram/1000)
+        self.poundValue = (gram/453.59237)
+        self.ounceValue = (gram/28.34952)
     }
     func kilogramTo(_ kilogram:Double) {
-        self.gramValue = (kilogram * 1000)
-        self.poundValue = (kilogram * 2.20462)
-        self.ounceValue = (kilogram * 35.274)
+        self.gramValue = (kilogram*1000)
+        self.poundValue = (kilogram/0.45359237)
+        self.ounceValue = (kilogram/0.02834952)
     }
     
     func poundTo(_ pound:Double) {
-        self.gramValue = (pound * 453.592)
-        self.kilogramValue = (pound * 0.453592)
-        self.ounceValue = (pound * 16)
+        self.gramValue = (pound*453.59237)
+        self.kilogramValue = (pound*0.45359237)
+        self.ounceValue = (pound*16)
     }
     func ounceTo(_ ounce:Double) {
-        self.gramValue = (ounce * 28.3495)
-        self.kilogramValue = (ounce * 0.0283495)
-        self.poundValue = (ounce * 0.0625)
+        self.gramValue = (ounce*28.34952)
+        self.kilogramValue = (ounce*0.0283495)
+        self.poundValue = (ounce/16)
     }
 }

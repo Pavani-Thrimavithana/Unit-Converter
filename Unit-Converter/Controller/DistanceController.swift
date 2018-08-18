@@ -18,40 +18,40 @@ class DistanceController{
     
     //Methods
     func metreTo(_ metre:Double) {
-        self.footValue = (metre * 3.28084)
-        self.yardValue = (metre * 1.09361)
-        self.kilometreValue = (metre * 0.001)
-        self.mileValue = (metre * 0.000621371)
+        self.footValue = (metre/0.3084)
+        self.yardValue = (metre*1.093613)
+        self.kilometreValue = (metre/1000)
+        self.mileValue = (metre*0.000621371)
     }
     
     func footTo(_ foot:Double){
-        self.metreValue = (foot * 1)
-        self.yardValue = (foot * 1)
-        self.kilometreValue = (foot * 1)
-        self.mileValue = (foot * 1)
+        self.metreValue = (foot*0.3048)
+        self.yardValue = (foot*0.33333)
+        self.kilometreValue = (foot/3280.8)
+        self.mileValue = (foot/5280)
 
     }
     
     func yardTo(_ yard:Double){
-        self.metreValue = (yard * 1)
-        self.footValue = (yard * 1)
-        self.kilometreValue = (yard * 1)
-        self.mileValue = (yard * 1)
+        self.metreValue = (yard/1.0936)
+        self.footValue = (yard*3)
+        self.kilometreValue = (yard/1093.6)
+        self.mileValue = (yard*0.0005681818)
 
     }
     
     func kilometreTo(_ kilometre:Double){
-        self.metreValue = (kilometre * 1)
-        self.footValue = (kilometre * 1)
-        self.yardValue = (kilometre * 1)
-        self.mileValue = (kilometre * 1)
+        self.metreValue = (kilometre*1000)
+        self.footValue = (kilometre*3280.84)
+        self.yardValue = (kilometre*1093.613)
+        self.mileValue = (kilometre*0.62137)
     }
     
     func mileTo(_ mile:Double){
-        self.metreValue = (mile * 1)
-        self.footValue = (mile * 1)
-        self.yardValue = (mile * 1)
-        self.kilometreValue = (mile * 1)
+        self.metreValue = (mile*1609.344)
+        self.footValue = (mile*5280)
+        self.yardValue = (mile*1760)
+        self.kilometreValue = (mile/0.62137)
 
     }
 }

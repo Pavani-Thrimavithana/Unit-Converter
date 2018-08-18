@@ -17,17 +17,14 @@ class WeightViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.layer.shadowColor = UIColor.black.cgColor
-        self.navigationController?.navigationBar.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
-        self.navigationController?.navigationBar.layer.shadowRadius = 4.0
-        self.navigationController?.navigationBar.layer.shadowOpacity = 1.0
-        self.navigationController?.navigationBar.layer.masksToBounds = false
+       
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+      
     }
     
     /*
@@ -113,6 +110,10 @@ class WeightViewController: UIViewController {
     
     @IBAction func onEditOunce(_ sender: Any) {
         clearAll()
+    }
+    //Hide the keyboard 
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    self.view.endEditing(true)
     }
     
 }

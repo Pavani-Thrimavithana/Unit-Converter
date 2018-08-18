@@ -16,15 +16,15 @@ class TemperatureController {
     
     //Methods
     func celciusTo(_ celcius:Double) {
-        self.fahrenheitValue = (celcius * 33.8)
-        self.kelvinValue = (celcius * 274.15)
+        self.fahrenheitValue = ((celcius*1.8)+32)
+        self.kelvinValue = (celcius+273.15)
     }
     func fahrenheitTo(_ fahrenheit:Double) {
-        self.celciusValue = (fahrenheit * -17.2222)
-        self.kelvinValue = (fahrenheit * 274.928)
+        self.celciusValue = ((fahrenheit-32)/(1.8))
+        self.kelvinValue = ((fahrenheit+459.67)*(5/9))
     }
     func kelvinTo(_ kelvin:Double) {
-        self.celciusValue = (kelvin * -272.15)
-        self.kelvinValue = (kelvin * -457.87)
+        self.celciusValue = (kelvin-273.15)
+        self.kelvinValue = ((kelvin*1.8)-459.67)
     }
 }

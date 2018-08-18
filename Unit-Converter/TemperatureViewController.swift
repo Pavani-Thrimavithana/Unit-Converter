@@ -69,6 +69,7 @@ class TemperatureViewController: UIViewController {
             let temperaturController = TemperatureController()
             temperaturController.celciusTo(inputKelvinValue!)
             self.celciusValue.text = String(temperaturController.celciusValue)
+            print("text")
             self.fahrenheitValue.text = String(temperaturController.fahrenheitValue)
         }
     }
@@ -92,4 +93,8 @@ class TemperatureViewController: UIViewController {
          clearAll()
     }
     
+    //Hide the keyboard
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
 }

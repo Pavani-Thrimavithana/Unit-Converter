@@ -17,26 +17,26 @@ class SpeedController{
     
     //Method
     func mpsTo(_ mps:Double){
-        self.fpminValue = (mps * 1)
-        self.kmphValue = (mps * 1)
-        self.mphValue = (mps * 1 )
+        self.fpminValue = (mps*196.8504)
+        self.kmphValue = (mps*3.6)
+        self.mphValue = (mps*2.236936)
     }
     
     func fpminTo(_ fpmin:Double){
-        self.mpsValue = (fpmin * 1)
-        self.kmphValue = (fpmin * 1)
-        self.mphValue = (fpmin * 1 )
+        self.mpsValue = (fpmin/196.8504)
+        self.kmphValue = (fpmin/54.68066)
+        self.mphValue = (fpmin/88)
     }
     
     func kmphTo(_ kmph:Double) {
-        self.mpsValue = (kmph * 1)
-        self.fpminValue = (kmph * 1)
-        self.mphValue = (kmph * 1 )
+        self.mpsValue = (kmph/3.6)
+        self.fpminValue = (kmph*54.68066)
+        self.mphValue = (kmph/1.609344)
     }
     
     func mphTo(_ mph:Double) {
-        self.mpsValue = (mph * 1)
-        self.fpminValue = (mph * 1)
-        self.kmphValue = (mph * 1)
+        self.mpsValue = (mph/2.236936)
+        self.fpminValue = (mph*88)
+        self.kmphValue = (mph*1.609344)
     }
 }
